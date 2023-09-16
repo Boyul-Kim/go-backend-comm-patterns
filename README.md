@@ -5,3 +5,13 @@
 
  - Concepts currently iterated on:
     - Short Polling
+      - [ ] Client sends a request
+      - [ ] Server responds immediately with a handle
+      - [ ] Server connotes to process the request
+      - [ ] Client uses the handle to check for status
+    - Server Sent Events
+      - [ ] Response has a start and end
+      - [ ] Client sends a request
+      - [ ] Server sends logical events as part of response that the client can understand
+      - [ ] Server never writes the end/final response
+      - [ ] Client parses the data
