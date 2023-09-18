@@ -32,7 +32,8 @@ func InitServer() *Server {
 	s.Fiber.Post("/poll/short", s.shortPoll)
 	s.Fiber.Get("/poll/short/check", s.checkShortPoll)
 	s.Fiber.Get("/sse", adaptor.HTTPHandler(handler(eventHandler)))
-
+	s.Fiber.Get("/pubSub/pub", s.RabbitMQPub)
+	s.Fiber.Get("/pubSub/sub", s.RabbitMQSub)
 	return &s
 }
 
